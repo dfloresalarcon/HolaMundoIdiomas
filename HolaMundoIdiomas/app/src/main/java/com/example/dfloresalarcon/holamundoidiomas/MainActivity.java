@@ -1,6 +1,7 @@
 package com.example.dfloresalarcon.holamundoidiomas;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.Menu;
@@ -19,7 +20,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
+        //FORMA 1 CUTRE :D
         TextView texto = (TextView)findViewById(R.id.toShow);
         if (texto.getText().toString().contains("port"))
         {
@@ -28,25 +29,30 @@ public class MainActivity extends Activity {
         else{
             showToast("Por favor gire el dispositivo para ponerlo de manera vertical");
         }
-        */
 
 
-       // setContentView(R.layout.main);
+        //FORMA 2
+        //setContentView(R.layout.main);
         Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
-
         // Get the orientation
         int orientacionDeLaPantalla = display.getOrientation();
 
         if(orientacionDeLaPantalla ==0){
-
             Toast.makeText(MainActivity.this, "Orientacion: Vertical con Valor"+ orientacionDeLaPantalla, Toast.LENGTH_SHORT).show();
-
+        }
+        if(orientacionDeLaPantalla ==1){
+            Toast.makeText(MainActivity.this, "Orientacion: Horizontal con Valor"+ orientacionDeLaPantalla, Toast.LENGTH_SHORT).show();
         }
 
-        if(orientacionDeLaPantalla ==1){
 
-            Toast.makeText(MainActivity.this, "Orientacion: Horizontal con Valor"+ orientacionDeLaPantalla, Toast.LENGTH_SHORT).show();
-
+        //FORMA GONZALO
+        if (getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE)
+        {
+            Toast.makeText(MainActivity.this, "ES HORIZONTAAALL!!! YEEP", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(MainActivity.this, "ES VERTICAAAAAAAAAL!!! YEEP", Toast.LENGTH_LONG).show();
         }
 
 
