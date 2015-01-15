@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">HolaMundoIdiomas</string>
-    <string name="hello_world">hola mundo vertical</string>
+    <string name="hello_world">hola mundo port</string>
     <string name="action_settings">Ajustes</string>
 
 </resources>

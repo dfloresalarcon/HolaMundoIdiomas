@@ -2,8 +2,14 @@ package com.example.dfloresalarcon.holamundoidiomas;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends Activity {
@@ -12,6 +18,38 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*
+        TextView texto = (TextView)findViewById(R.id.toShow);
+        if (texto.getText().toString().contains("port"))
+        {
+            showToast("nada");
+        }
+        else{
+            showToast("Por favor gire el dispositivo para ponerlo de manera vertical");
+        }
+        */
+
+
+       // setContentView(R.layout.main);
+        Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+
+        // Get the orientation
+        int orientacionDeLaPantalla = display.getOrientation();
+
+        if(orientacionDeLaPantalla ==0){
+
+            Toast.makeText(MainActivity.this, "Orientacion: Vertical con Valor"+ orientacionDeLaPantalla, Toast.LENGTH_SHORT).show();
+
+        }
+
+        if(orientacionDeLaPantalla ==1){
+
+            Toast.makeText(MainActivity.this, "Orientacion: Horizontal con Valor"+ orientacionDeLaPantalla, Toast.LENGTH_SHORT).show();
+
+        }
+
+
     }
 
 
@@ -33,4 +71,11 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void showToast(String msg)
+    {
+        Toast t = Toast.makeText(this.getApplicationContext(), msg, Toast.LENGTH_LONG);
+        t.show();
+    }
+
 }
