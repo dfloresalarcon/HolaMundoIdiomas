@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
         }
 
 
-        //FORMA 2
+        //FORMA 2 INTERNET ENCONTRADO
         //setContentView(R.layout.main);
         Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
         // Get the orientation
@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
         }
 
 
-        //FORMA GONZALO
+        //FORMA 3 GONZALO
         if (getResources().getConfiguration().orientation== Configuration.ORIENTATION_LANDSCAPE)
         {
             Toast.makeText(MainActivity.this, "ES HORIZONTAAALL!!! YEEP", Toast.LENGTH_LONG).show();

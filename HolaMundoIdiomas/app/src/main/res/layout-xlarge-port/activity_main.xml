@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/toShow"
+        android:text="@string/hello_world"
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="650dp"
+        android:layout_height="400dp"
+        android:background="#ff5cffec"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/toShow1"
+            android:text="@string/hello_world"
+            android:layout_width="600dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="650dp"
+        android:layout_height="400dp"
+        android:background="#ff47ff48"
+        android:layout_marginTop="550dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/toShow2"
+            android:text="@string/hello_world"
+            android:layout_width="600dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
